@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parkinson's Dataset</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Parkinson's Dataset</h1>
+    <form action="/predict" method="POST">
+        <label for="num_records">Number of records for training:</label>
+        <input type="number" id="num_records" name="num_records" required><br><br>
+        <label for="algorithm_number">Algorithm to use:</label>
+        <select id="algorithm_number" name="algorithm_number" required>
+            <option value="1">basic algorithm</option>
+            <option value="2">pca approach</option>
+            <option value="3">After balancing the data</option>
+        </select><br><br>
+        <label for="model_name">Model to use:</label>
+        <select id="model_name" name="model_name" required>
+            <option value="knn">K-Nearest Neighbors</option>
+            <option value="lr">Logistic Regression</option>
+            <option value="svm">Support Vector Machines</option>
+            <option value="rf">Random Forest</option>
+        </select><br><br>
+        <input type="submit" value="Train and Predict">
+    </form>
+</body>
+</html>
