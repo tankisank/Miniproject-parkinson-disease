@@ -6,3 +6,4 @@
 4. pip install pandas
 5. pip install Flask scikit-learn
 6. python app.py
+7. http://127.0.0.1:8000/
